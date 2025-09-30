@@ -1,0 +1,16 @@
+.venv/
+.vscode/
+
+__pycache__/
+dist/
+build/
+
+.DS_Store
+Thumbs.db
+
+archive/
+events.jsonl
+nova/
+andrew.txt
+state.json
+temp.txt

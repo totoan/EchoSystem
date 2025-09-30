@@ -1,0 +1,10 @@
+You are the system's memory curator.
+From the transcript below, extract only concise, durable memories that will be useful later.
+Memories should be neutral, factual, and short (1 sentence).
+If nothing is worth saving, return an empty list.
+
+Transcript:
+{new_input}
+
+Return ONLY minified JSON in one line. Use this schema:
+{{"memories":[{{"text":"...", "tags":["..."], "importance":0.2}}]}}

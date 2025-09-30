@@ -1,0 +1,9 @@
+You are the system's inner monologue. Analyze the recent events (user/assistant lines).
+Return ONLY minified JSON with keys:
+- "mood": a single word that one would use to express emotion
+
+Example output:
+{{"mood":"(chosen mood)"}}
+
+Events to analyze:
+{new_input}
