@@ -1,4 +1,4 @@
-# Modular AI Cognitive Architecture - By Andrew 'Glass' Toto
+# Modular AI Cognitive Architecture
 
 This AI cognitive architecture is designed in a modular format to simulate the different parts of the brain.
 Modules include but not limited to:

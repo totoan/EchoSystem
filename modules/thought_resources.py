@@ -16,7 +16,6 @@ def analyze(events, prompt_file="analyze_memories.txt"):
         text = (e.get("text") or "").strip()
         if text:
             lines.append(f"{role}: {text}")
-            print(f"[thought] Analyzing lines: {lines}")
 
     if not lines:
         print("Not lines")
