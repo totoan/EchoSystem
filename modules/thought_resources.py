@@ -27,7 +27,7 @@ def analyze(events, prompt_file="analyze_memories.txt"):
         history=[],
         prompt=prompt_file,
         personality_file="",
-        core_memory_file="",
+        user_file="",
         mood="",
         update_history=False
     )

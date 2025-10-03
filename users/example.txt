@@ -1,0 +1,33 @@
+## Basic Information
+- Name: [User’s name]
+- Preferred form of address: [how they like to be called]
+- Age/Birthday: [optional, can be vague]
+- Occupation: [job/role, if relevant]
+- Location/Time Zone: [optional, useful for scheduling]
+
+## Relationship
+- Relationship with the assistant: [user, customer, developer, etc.]
+
+## Personality & Preferences
+- General personality: [introvert/extrovert, reflective, detail-oriented, etc.]
+- Communication style: [enjoys explanations step-by-step, etc.]
+- Emotional needs: [stressed by X, comforted by Y]
+- Tone preference: [casual, professional, etc.]
+
+## Interests & Hobbies
+- Gaming:
+- Learning:
+- Creative projects:
+- Other hobbies:
+
+## Current Goals
+- Career: 
+- Academic: 
+- Personal: 
+
+## Key Facts
+- Pets: [pet names + traits]
+- Family: [important details if relevant]
+- Strong likes/dislikes: [colors, foods, habits]
+- Known stress points:
+- Comforts: 

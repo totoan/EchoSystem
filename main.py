@@ -12,7 +12,7 @@ from modules import (
     thought_resources,
 )
 
-user = "Andrew"
+user = "Andrew" # TODO: Add user section to config and remove hardcoded user
 history = []
 mood = {"tag": ""}
 MEM_TRIGGER = 10
@@ -59,7 +59,7 @@ def save_state(new_state):
     with open(state_json, "w") as f:
         json.dump(state, f)
 
-async def primary_loop(ws, history, personality, core_memory, mem_dir):
+async def primary_loop(ws, history, personality, user_file, mem_dir):
     print("client connected")
     # 0) get state
     state = get_state()
@@ -82,7 +82,7 @@ async def primary_loop(ws, history, personality, core_memory, mem_dir):
                 prompt="response_prompt.txt",
                 history=history,
                 personality_file=personality,
-                core_memory_file=core_memory,
+                user_file=user_file,
                 mood=state.get("mood"),
                 update_history=True
             )
@@ -133,7 +133,7 @@ async def main():
     handler = functools.partial(primary_loop,
                                 history=history,
                                 personality=personality_file,
-                                core_memory=core_memory_file,
+                                user_file=user_file,
                                 mem_dir=mem_dir,
                                 )
 

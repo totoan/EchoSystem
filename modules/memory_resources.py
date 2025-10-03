@@ -166,7 +166,7 @@ def create_memories_from_history(
         prompt=prompt_file,
         history=[],
         personality_file="",
-        core_memory_file="",
+        user_file="",
         mood="",
         update_history=False,
     )

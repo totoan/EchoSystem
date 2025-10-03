@@ -18,7 +18,7 @@ def build_system_prompt(new_input,
                         formatted_history = "", 
                         prompt_file = "default.txt", 
                         personality_file = "",
-                        core_memory_file = "",
+                        user_file = "",
                         mood = "",
                         ):
     prompt_dir = "modules\prompts"
@@ -35,12 +35,12 @@ def build_system_prompt(new_input,
     if prompt_file == "response_prompt.txt":
         with open(personality_file, "r", encoding="utf-8") as f:
             personality = f.read()
-        with open(core_memory_file, "r", encoding="utf-8") as f:
+        with open(user_file, "r", encoding="utf-8") as f:
             core_memory = f.read()
         system_prompt = base_prompt.format(
             new_input=new_input,
             personality=personality,
-            core_memory=core_memory,
+            user_file=user_file,
             mood=mood,
             history=formatted_history
         )
@@ -78,13 +78,13 @@ def parse_model_response(output_text):
     tags = re.findall(r"<([^:>]+):([^>]+)>", assistant_reply_raw)
     return assistant_section, tags
 
-def run_chat_completion(new_input, prompt, history, personality_file, core_memory_file, mood, update_history=False):
+def run_chat_completion(new_input, prompt, history, personality_file, user_file, mood, update_history=False):
     formatted_history = format_conversation_history(history) if update_history else ""
     system_prompt = build_system_prompt(new_input, 
                                         formatted_history=formatted_history, 
                                         prompt_file=prompt, 
                                         personality_file=personality_file,
-                                        core_memory_file=core_memory_file,
+                                        user_file=user_file,
                                         mood=mood)
     response = generate_response_from_ollama(system_prompt)
     cleaned_response = parse_model_response(response)
