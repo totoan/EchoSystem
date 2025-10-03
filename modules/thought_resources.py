@@ -31,7 +31,7 @@ def analyze(events, prompt_file="analyze_memories.txt"):
         mood="",
         update_history=False
     )
-    text = response[0]
+    text = response[0].lower()
     block = memory_resources._extract_json_block(text)
     try:
         return json.loads(block)
